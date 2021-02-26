@@ -10,7 +10,7 @@
         android:id="@+id/mapBlock"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/myLoc"
+        android:layout_above="@id/dvertd"
         android:layout_marginBottom="@dimen/ten_dp"
         >
 
@@ -24,10 +24,10 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/myLoc"
+        android:id="@+id/dvertd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Confirm My Location"
+        android:text="Dvered"
         android:layout_alignParentBottom="true"
         />
 

@@ -13,6 +13,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -60,6 +61,8 @@ public class LocationFetchTurnOFFLightActivity extends AppCompatActivity impleme
 
     Double deliveryLocationLat, deliveryLocationLongi;
 
+    Button dvertd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +71,15 @@ public class LocationFetchTurnOFFLightActivity extends AppCompatActivity impleme
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         mapView = mapFragment.getView();
+
+        dvertd=(Button)findViewById(R.id.dvertd);
+
+        dvertd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //update deliverd status
+            }
+        });
 
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(LocationFetchTurnOFFLightActivity.this);
 
