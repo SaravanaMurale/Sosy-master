@@ -45,6 +45,16 @@
         <activity android:name=".intruderdetection.IntruderDetectionActivity" />
         <activity android:name=".batterymonitoring.BatteryMonitoringActivity" />
 
+        <!--Google Map-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCnG_pJ7ZVHK3CyT1Y8OG_ortNhgvJbxBQ" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--End Google Map-->
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />

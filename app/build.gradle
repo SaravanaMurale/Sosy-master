@@ -61,5 +61,10 @@ dependencies {
     //Picassco
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
+    //Map
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+
 
 }
