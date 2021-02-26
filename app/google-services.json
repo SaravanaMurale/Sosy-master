@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "256614892227",
+    "firebase_url": "https://sosy-956f2.firebaseio.com",
+    "project_id": "sosy-956f2",
+    "storage_bucket": "sosy-956f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256614892227:android:842b68dc68d303c4e25876",
+        "android_client_info": {
+          "package_name": "com.sosaley.sosy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256614892227-ir16lp91fa4nf0j1ngr8dqh67gehfhc3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sosaley.sosy",
+            "certificate_hash": "7213a4815fc7090949cd79d4c1afccd9e53bcbe9"
+          }
+        },
+        {
+          "client_id": "256614892227-nqi3e8aeopppqrahgbu32et1hukhapsl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfVT-MJpheFyxERQD5OZnxujBzRV7tt08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256614892227-nqi3e8aeopppqrahgbu32et1hukhapsl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

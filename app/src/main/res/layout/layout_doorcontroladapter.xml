@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/fifteen_dp"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/doorImg"
+        android:layout_width="@dimen/hundren_dp"
+        android:layout_height="@dimen/hundren_dp"
+        android:src="@drawable/ceiling" />
+
+    <TextView
+        android:id="@+id/doorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/doorImg"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Ceiling Light" />
+
+    <TextView
+        android:id="@+id/decDoor"
+        android:layout_width="@dimen/twenty_dp"
+        android:layout_height="@dimen/twenty_dp"
+        android:layout_below="@id/doorName"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:gravity="center"
+        android:text="-"
+        android:textSize="@dimen/twenty_dp"
+        android:fontFamily="sans-serif-condensed"
+        />
+
+    <TextView
+        android:id="@+id/doorCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/doorName"
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_toRightOf="@id/decDoor"
+        android:textSize="@dimen/twenty_dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/incDoor"
+        android:layout_width="@dimen/twenty_dp"
+        android:layout_height="@dimen/twenty_dp"
+        android:layout_below="@id/doorName"
+        android:layout_marginLeft="@dimen/fifteen_dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_toRightOf="@id/doorCount"
+        android:gravity="center"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="@dimen/twenty_dp"
+        android:text="+" />
+
+
+</RelativeLayout>

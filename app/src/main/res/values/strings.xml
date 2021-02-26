@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Sosy</string>
+
+    <string name="short_password">Password is too short</string>
+    <string name="other_singin">Other Signin Options</string>
+    <string name="submit">Submit</string>
+    <string name="otp_verified">Successfully Verified OTP</string>
+    <string name="enter_otp">Please Enter OTP!</string>
+
+    <string name="facebook_app_id">531226411123111</string>
+    <string name="fb_login_protocol_scheme">fb531226411123111</string>
+
+    <string name="forget_password">Forget Password?</string>
+    <string name="login">Login</string>
+    <string name="continue_Gmail">Continue with Gmail</string>
+    <string name="signup">SignUp</string>
+    <string name="doeasy">Do Easy With Sosy</string>
+
+    <!--Home Screen-->
+    <string name="lightcontrol">Light Control</string>
+    <string name="doorstatus">Door Status</string>
+    <string name="intruderdetection">Intruder Detection</string>
+    <string name="batterymonitoring">Battery Monitoring</string>
+    <string name="airquality_">Air Quality</string>
+    <string name="roomtemp">Room Temperature</string>
+    <string name="stove">Smart Stove Knob</string>
+
+    <!--Light names-->
+    <string name="celeing_light">CELEING LIGHT</string>
+    <string name="dim_light">DIM LIGHT</string>
+    <string name="table_light">TABLE LIGHT</string>
+    <string name="reading_light">READING LIGHT</string>
+    <string name="single_light">SINGLE LIGHT</string>
+
+    <!-- Room Names -->
+    <string name="hall">Hall</string>
+    <string name="master_bedroom">Master BedRoom</string>
+    <string name="second_bedroom">Second BedRoom</string>
+    <string name="kitchen">Kitchen</string>
+    <string name="pooja_room">Pooja Room</string>
+
+    <!--Door Names-->
+    <string name="maindoor">Main Door</string>
+
+    <string name="configure">Configure</string>
+
+    <!--Air Quality-->
+    <string name="air_quality">Air Quality</string>
+    <string name="check">CHECK</string>
+
+    <!--Room Temperatur-->
+    <string name="room_temperatur">Room Temperature</string>
+
+    <!--Battery Names-->
+    <string name="carBattery">Car Battery</string>
+    <string name="bikeBattery">Bike Battery</string>
+    <string name="truckBattery">Truck Battery</string>
+    <string name="inverterBattery">Inverter Battery</string>
+    <string name="eBikeBattery">E-Bike Battery</string>
+    <string name="eTruckBattery">E-Truck Battery</string>
+
+
+</resources>

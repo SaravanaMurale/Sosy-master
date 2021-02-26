@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".intruderdetection.IntruderDetectionActivity">
+
+    <ImageView
+        android:id="@+id/sosyIconIntruder"
+        android:layout_width="@dimen/hundren_dp"
+        android:layout_height="@dimen/hundren_dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sosy"
+        android:layout_marginTop="@dimen/twenty_dp"
+        />
+
+    <TextView
+        android:id="@+id/intruduerControlActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sosyIconIntruder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/five_dp"
+        android:text="Please select the lights to control"
+
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/intruderControlRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intruduerControlActivity"
+        android:layout_marginTop="@dimen/forty_dp"
+        android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/intruderRoomControlRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intruderControlRecyclerView"
+        android:layout_marginTop="@dimen/forty_dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/intruderControlConfigure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/configure"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/ten_dp"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    tools:context=".signin.SignUpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/sosyicon"
+            android:layout_width="@dimen/hundren_dp"
+            android:layout_height="@dimen/hundren_dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:src="@drawable/sosy"
+            />
+
+        <TextView
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/fifty_dp"
+            android:background="@drawable/rectangle_shpae"
+            android:padding="@dimen/ten_dp"
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_below="@id/sosyicon">
+
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Name"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_layout_name">
+
+            <EditText
+                android:id="@+id/input_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Mobile Number"
+                android:fontFamily="sans-serif-condensed"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_layout_mobile">
+
+            <EditText
+                android:id="@+id/input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Email"
+                android:fontFamily="sans-serif-condensed"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_layout_email">
+
+            <EditText
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_layout_password"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:enabled="false"
+            android:text="Sign Up" />
+
+        <TextView
+            android:id="@+id/forgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_signup"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:text="@string/forget_password"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+
+            />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_signup"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:layout_marginRight="@dimen/five_dp"
+            android:text="@string/login"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+
+            />
+
+
+
+
+       <!-- <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/fbSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="@dimen/ten_dp"
+                android:paddingBottom="@dimen/ten_dp"
+                android:text="Signup with Facebook" />
+
+            <com.shobhitpuri.custombuttons.GoogleSignInButton
+                android:id="@+id/gmailSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/fbSignup"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:text="@string/continue_Gmail"
+                android:gravity="center"
+                android:background="@color/red"
+
+                />
+
+            <TextView
+                android:id="@+id/othersignin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/gmailSignup"
+                android:layout_centerHorizontal="true"
+                android:text="@string/other_singin"
+                android:layout_marginBottom="@dimen/five_dp"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@id/gmailSignup"
+                android:layout_marginBottom="@dimen/thiteen_dp"
+                android:layout_toLeftOf="@id/othersignin"
+                android:background="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@id/gmailSignup"
+                android:layout_marginBottom="@dimen/thiteen_dp"
+                android:layout_toRightOf="@id/othersignin"
+                android:background="@color/black" />
+
+        </RelativeLayout>-->
+
+
+        <include layout="@layout/fragment_social_signup" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
