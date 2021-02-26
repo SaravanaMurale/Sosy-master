@@ -19,7 +19,6 @@
             android:layout_width="@dimen/fifty_dp"
             android:layout_height="@dimen/fifty_dp"
             android:layout_centerHorizontal="true"
-
             android:src="@drawable/sosy" />
 
         <TextView
