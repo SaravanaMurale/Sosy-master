@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sosaley.sosy">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dhome.LocationFetchTurnOFFLightActivity"></activity>
+        <activity android:name=".dhome.ProfileSettingsActivity"></activity>
+        <activity android:name=".dhome.ProfileActivity" />
+        <activity android:name=".dhome.LocationFetchTurnOFFLightActivity" />
         <activity android:name=".dhome.DHomeItemListActivity" />
         <activity android:name=".dhome.HomeActivity" />
         <activity android:name=".signin.SignUpActivity">
@@ -44,22 +45,18 @@
         <activity android:name=".airquality.AirQualityActivity" />
         <activity android:name=".roomtemperature.RoomTemperatureActivity" />
         <activity android:name=".intruderdetection.IntruderDetectionActivity" />
-        <activity android:name=".batterymonitoring.BatteryMonitoringActivity" />
-
-        <!--Google Map-->
+        <activity android:name=".batterymonitoring.BatteryMonitoringActivity" /> <!-- Google Map -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCnG_pJ7ZVHK3CyT1Y8OG_ortNhgvJbxBQ" />
         <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
-        <!--End Google Map-->
-
+            android:value="@integer/google_play_services_version" /> <!-- End Google Map -->
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
     </application>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <uses-permission android:name="android.permission.INTERNET" />
 
