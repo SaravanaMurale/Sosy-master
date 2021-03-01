@@ -6,7 +6,99 @@
     android:layout_height="match_parent"
     tools:context=".dhome.DLoginActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_centerInParent="true"
+        >
 
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_password"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Login" />
+
+
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/login_email"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="left"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLength="15" />
+
+
+
+        <EditText
+            android:id="@+id/login_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/loginAccount"
+            android:layout_margin="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="left"
+            android:hint="Email/Mobile"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+
+            ><requestFocus/></EditText>
+
+
+        <TextView
+            android:id="@+id/loginAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Login Account"
+            android:textColor="@color/red"
+            android:textSize="30dp"
+            android:fontFamily="sans-serif-condensed"
+            android:enabled="false"
+            />
+
+        <TextView
+            android:id="@+id/signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signup"
+            android:layout_below="@id/loginBtn"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/btn_Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Password?"
+            android:layout_below="@id/loginBtn"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp"
+            />
+
+
+    </RelativeLayout>
 
 
 </RelativeLayout>
