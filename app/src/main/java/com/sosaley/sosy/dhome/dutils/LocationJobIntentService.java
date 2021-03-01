@@ -38,7 +38,7 @@ public class LocationJobIntentService extends JobIntentService {
 
     public static void enqueueWork(Context context, Intent serviceIntent) {
 
-        System.out.println("InSideEnqueue");
+        //System.out.println("InSideEnqueue");
 
         enqueueWork(context, LocationJobIntentService.class, 1, serviceIntent);
         mCtx=context;
@@ -51,7 +51,7 @@ public class LocationJobIntentService extends JobIntentService {
     @Override
     protected void onHandleWork(@NonNull Intent intent) {
 
-        System.out.println("InsideOnHandleWork");
+        //System.out.println("InsideOnHandleWork");
 
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(mCtx);
         locationManager = (LocationManager) mCtx.getSystemService(Context.LOCATION_SERVICE);
