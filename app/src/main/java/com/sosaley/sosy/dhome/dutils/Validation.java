@@ -15,6 +15,16 @@ public class Validation {
 
     }
 
+    public static boolean validateName(String name) {
+
+        if (name.length() < 3) {
+            return false;
+        }
+
+        return true;
+
+    }
+
     public static boolean validateEmail(String email) {
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 

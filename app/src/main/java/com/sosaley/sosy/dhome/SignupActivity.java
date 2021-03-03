@@ -12,6 +12,7 @@ import android.os.ResultReceiver;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sosaley.sosy.R;
@@ -21,6 +22,9 @@ import com.sosaley.sosy.dhome.dutils.LocationJobIntentService;
 import com.sosaley.sosy.dhome.dutils.Validation;
 
 import static com.sosaley.sosy.dhome.dutils.AppConstants.GPS_PROVIDER_CODE;
+import static com.sosaley.sosy.dhome.dutils.Validation.validateEmail;
+import static com.sosaley.sosy.dhome.dutils.Validation.validateMobileNumber;
+import static com.sosaley.sosy.dhome.dutils.Validation.validatePassword;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -31,6 +35,8 @@ public class SignupActivity extends AppCompatActivity {
     private EditText signUpName, signUpEmail, signUpMobile, signUpPassword, signUpCPassword;
 
     Double dStLocLat,dStLocLong;
+
+    TextView dAddress;
 
 
     @Override
@@ -57,9 +63,10 @@ public class SignupActivity extends AppCompatActivity {
 
                 validateSignupRequest(userName,userEmail,userMobile,userPassword,userCPassword);
 
-               /* if (Validation.va(userName) && validateEmail(userEmail) && validateMobileNumber(userMobile) && validatePassword(userPassword) && validatePassword(userCPassword) && userPassword.equals(userCPassword)) {
+                if (Validation.validateName(userName) && validateEmail(userEmail) && validateMobileNumber(userMobile) && validatePassword(userPassword) && validatePassword(userCPassword) && userPassword.equals(userCPassword) && dStLocLat!=null && dStLocLong!=null) {
+                    //save store details and its location in firestore
 
-                }*/
+                }
 
 
 
@@ -114,20 +121,7 @@ public class SignupActivity extends AppCompatActivity {
         }
     }
 
-    @SuppressLint("MissingPermission")
-    private void getDeviceLocation() {
 
-        //System.out.println("GetDeviceLocationIsCalled");
-
-        MyResultReceiver myResultReceiver = new MyResultReceiver(null);
-
-        Intent serviceIntent = new Intent(SignupActivity.this, LocationJobIntentService.class);
-
-        serviceIntent.putExtra("MYRESULTRECEIVER", myResultReceiver);
-
-        LocationJobIntentService.enqueueWork(SignupActivity.this, serviceIntent);
-
-    }
 
     private void enableGPS() {
 
@@ -142,6 +136,21 @@ public class SignupActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    @SuppressLint("MissingPermission")
+    private void getDeviceLocation() {
+
+        //System.out.println("GetDeviceLocationIsCalled");
+
+        MyResultReceiver myResultReceiver = new MyResultReceiver(null);
+
+        Intent serviceIntent = new Intent(SignupActivity.this, LocationJobIntentService.class);
+
+        serviceIntent.putExtra("MYRESULTRECEIVER", myResultReceiver);
+
+        LocationJobIntentService.enqueueWork(SignupActivity.this, serviceIntent);
 
     }
 
@@ -187,6 +196,8 @@ public class SignupActivity extends AppCompatActivity {
         signUpPassword = (EditText) findViewById(R.id.signup_password);
         signUpCPassword = (EditText) findViewById(R.id.confirm_password);
 
+        dAddress=(TextView)findViewById(R.id.dstore_address);
+
         btnSignUp = (Button) findViewById(R.id.btnSignup);
 
     }
@@ -225,7 +236,7 @@ public class SignupActivity extends AppCompatActivity {
 
         }
 
-        if(!Validation.validateEmail(userEmail)){
+        if(!validateEmail(userEmail)){
             Toast.makeText(SignupActivity.this, "Invalid Email", Toast.LENGTH_LONG).show();
             signUpEmail.findFocus();
             return;
@@ -237,7 +248,7 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
-        if(!Validation.validateMobileNumber(userMobile)){
+        if(!validateMobileNumber(userMobile)){
             Toast.makeText(SignupActivity.this, "Invalid Mobile Number", Toast.LENGTH_LONG).show();
             signUpMobile.findFocus();
             return;
@@ -249,7 +260,7 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
-        if(!Validation.validatePassword(userPassword)){
+        if(!validatePassword(userPassword)){
             Toast.makeText(SignupActivity.this, "Password should have minimum 6 characters", Toast.LENGTH_LONG).show();
             signUpPassword.findFocus();
             return;
@@ -267,7 +278,7 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
-        if(!Validation.validatePassword(userCPassword)){
+        if(!validatePassword(userCPassword)){
             Toast.makeText(SignupActivity.this, "Confirm Password should have minimum 6 characters", Toast.LENGTH_LONG).show();
             signUpCPassword.findFocus();
             return;

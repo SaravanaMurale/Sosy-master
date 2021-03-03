@@ -40,7 +40,9 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".signin.LoginActivity" />
+        <activity android:name=".signin.LoginActivity"
+
+            />
         <activity android:name=".homescreen.BottomTabbedActivity" />
         <activity android:name=".lightcontrol.LightControlActivity" />
         <activity android:name=".doorstatus.DoorStatusActivity" />
@@ -57,9 +59,16 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
-    </application>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+        <service
+            android:name=".dhome.dutils.LocationJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
 </manifest>

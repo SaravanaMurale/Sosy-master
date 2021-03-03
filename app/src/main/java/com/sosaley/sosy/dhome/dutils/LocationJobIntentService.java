@@ -72,7 +72,7 @@ public class LocationJobIntentService extends JobIntentService {
                         myLocationLat = mLastKnownLocation.getLatitude();
                         myLocationLon = mLastKnownLocation.getLongitude();
 
-                        System.out.println("LATITIDEANDLONGITITE " + myLocationLat + " " + myLocationLon);
+                        //System.out.println("LATITIDEANDLONGITITE " + myLocationLat + " " + myLocationLon);
 
                         Bundle latLong = new Bundle();
                         latLong.putDouble("MYLATITIDE", myLocationLat);

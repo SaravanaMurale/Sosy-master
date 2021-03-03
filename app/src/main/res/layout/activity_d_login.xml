@@ -51,8 +51,8 @@
             android:layout_margin="20dp"
             android:fontFamily="sans-serif-condensed"
             android:gravity="left"
-            android:hint="Email/Mobile"
-            android:inputType="textEmailAddress"
+            android:hint="Mobile"
+            android:inputType="number"
             android:singleLine="true"
 
             ><requestFocus/></EditText>
